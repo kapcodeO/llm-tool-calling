@@ -1,0 +1,19 @@
+# Git
+.git/
+
+# Virtual environment
+include/
+bin/
+lib/
+share/
+pyvenv.cfg
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# OS
+.DS_Store
