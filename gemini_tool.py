@@ -124,4 +124,4 @@ def chat(message, history):
         return final_response.choices[0].message.content
     return assistant_message.content
 
-gr.ChatInterface(fn=chat, title="Chatbot").launch()
+gr.ChatInterface(fn=chat, title="Weather Assitant 🌤️").launch()
