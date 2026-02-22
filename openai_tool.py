@@ -1,3 +1,6 @@
+# THIS IS A PAID VERSION IT WILL ONLY RUN
+# IF YOU HAVE CREDITS REMAINING IN YOU OPENAI API
+
 from openai import OpenAI
 from dotenv import load_dotenv 
 import gradio as gr

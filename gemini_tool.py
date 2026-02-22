@@ -1,3 +1,6 @@
+# THIS IS THE FREE VERSION YOU JUST NEED A 
+# GEMINI API WHICH CAN BE GENERATED FOR FREE
+
 from openai import OpenAI
 from dotenv import load_dotenv 
 import gradio as gr
@@ -109,10 +112,14 @@ def chat(message, history):
     assistant_message = responses.choices[0].message
 
     if assistant_message.tool_calls:
-        messages.append(assistant_message.model_dump())
+        messages.append({
+            "role": "assistant",
+            "content": assistant_message.content or "",
+            "tool_calls": assistant_message.tool_calls
+        })
         tool_response = handle_tool_calls(assistant_message)
         messages.extend(tool_response)
-        final_response = client.chat.completions.create(model="gemini-2.5-flash-lite", messages=messages)
+        final_response = client.chat.completions.create(model="gemini-2.5-flash-lite", messages=messages, tools=tool)
 
         return final_response.choices[0].message.content
     return assistant_message.content
