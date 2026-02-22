@@ -35,8 +35,8 @@ integrates external APIs using tool/function calling.
 
 -   🔀 Provider Flexibility
 
-    -   Use OpenAI (Paid)\
-    -   Or use Gemini (Free Tier)\
+    -   Use OpenAI (Paid)
+    -   Or use Gemini (Free Tier)
         Users can choose either provider.
 
 ⚠️ Users must provide their own API keys for the selected provider.
@@ -45,8 +45,13 @@ integrates external APIs using tool/function calling.
 
 # 🏗 Project Structure
 
-llm-tool-calling/ │ ├── gemini_tool.py ├── openai_tool.py ├──
-requirements.txt ├── .gitignore ├── README.md └── .env (not tracked)
+llm-tool-calling/ │ 
+    ├── gemini_tool.py 
+    ├── openai_tool.py 
+    ├──requirements.txt 
+    ├── .gitignore 
+    ├── README.md 
+    └── .env (not tracked)
 
 ------------------------------------------------------------------------
 
@@ -54,7 +59,7 @@ requirements.txt ├── .gitignore ├── README.md └── .env (not tr
 
 Create a `.env` file in the root directory:
 
-OPENAI_API_KEY=your_openai_key_here\
+OPENAI_API_KEY=your_openai_key_here
 GEMINI_API_KEY=your_gemini_key_here
 
 ⚠️ `.env` is ignored by Git for security reasons.
@@ -93,12 +98,14 @@ https://github.com/kapcodeO/llm-tool-calling.git cd llm-tool-calling
 2️⃣ Create Virtual Environment python3 -m venv venv
 
 3️⃣ Activate Virtual Environment
-
+```
 (macOS/Linux) source venv/bin/activate
 
 (Windows) venv`\Scripts`{=tex}`\activate`{=tex}
+```
 
-4️⃣ Install Requirements pip install -r requirements.txt
+4️⃣ Install Requirements 
+`pip install -r requirements.txt`
 
 ------------------------------------------------------------------------
 
